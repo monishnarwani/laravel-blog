@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="{{URL('css/blog.css')}}">
+        <link rel="stylesheet" href="{{URL('css/app.css')}}">
 
         <title>Blog Template for Bootstrap</title>
 
@@ -71,10 +71,11 @@
 
 
 
-        <div class="container">
+        <div id="app" class="container">
             <div class="blog-header">
-                <h1 class="blog-title">The Bootstrap Blog</h1>
-                <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+                <example></example>
+                {{-- <h1 class="blog-title">The Bootstrap Blog</h1>
+                <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p> --}}
             </div>
             <hr>
             <div class="row">

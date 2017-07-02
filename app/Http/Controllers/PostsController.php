@@ -35,7 +35,19 @@ class PostsController extends Controller
 
         Post::create(request(['title', 'body']));
 
-        return redirect('/posts/create');
+        return redirect('/posts');
         
+    }
+
+    public function showAll() 
+    {
+        $posts = Post::latest()->get();
+
+        return view('posts.index', compact('posts'));
+    }
+
+    public function findById(Post $post)
+    {
+        return view('posts.show',compact('post'));
     }
 }

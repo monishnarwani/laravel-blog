@@ -11,8 +11,12 @@
 |
 */
 
-Route::get('/','PostsController@index');
+Route::get('/','PostsController@showAll');
 
 Route::get('/posts/create', 'PostsController@create');
 
 Route::post('/posts', 'PostsController@store');
+
+Route::get('/posts', 'PostsController@showAll');
+
+Route::get('/posts/{post}', 'PostsController@findById');
