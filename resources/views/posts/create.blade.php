@@ -8,7 +8,10 @@
 
         <hr>
 
-        <form>
+        <form  method="POST" action="/posts">
+
+            {{csrf_field() }}
+
             <div class="form-group">
                 <label for="title">Title:</label>
                 <input type="text" class="form-control" id="title" placeholder="Title" name="title">
@@ -20,7 +23,21 @@
             </div>
         
             <button type="submit" class="btn btn-primary">Publish</button>
+
+            @if(count($errors))
+                <div class="form-group">
+                    <div class="alert alert-danger0">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>{{$error}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>    
+            @endif
+
         </form>
     </div>
+    
 </div>
 @endsection
