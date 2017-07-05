@@ -46,6 +46,13 @@ class PostsController extends Controller
         return view('posts.index', compact('posts'));
     }
 
+    public function allposts() 
+    {
+        $posts = Post::latest()->get();
+
+        return $posts;
+    }
+
     public function findById(Post $post)
     {
         return view('posts.show',compact('post'));
