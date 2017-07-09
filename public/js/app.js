@@ -800,7 +800,7 @@ window.Vue = __webpack_require__(35);
 Vue.component('example', __webpack_require__(36));
 
 var app = new Vue({
-  el: '#app',
+  el: '#app12',
   data: {
     mess: 'Hello world'
   }
@@ -41578,7 +41578,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "panel-heading"
   }, [_vm._v("Example Component")]), _vm._v(" "), _c('div', {
     staticClass: "panel-body"
-  }, [_vm._v("\n                    " + _vm._s(_vm.message) + "\n                ")])])])])])
+  }, [_c('h1', [_vm._v(_vm._s(_vm.message))])])])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

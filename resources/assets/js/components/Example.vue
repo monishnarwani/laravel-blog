@@ -6,7 +6,7 @@
                     <div class="panel-heading">Example Component</div>
 
                     <div class="panel-body">
-                        {{message}}
+                        <h1>{{message}}</h1>
                     </div>
                 </div>
             </div>
