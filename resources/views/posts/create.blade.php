@@ -24,17 +24,9 @@
         
             <button type="submit" class="btn btn-primary">Publish</button>
 
-            @if(count($errors))
-                <div class="form-group">
-                    <div class="alert alert-danger0">
-                        <ul>
-                            @foreach($errors->all() as $error)
-                                <li>{{$error}}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>    
-            @endif
+            <hr>
+            
+            @include('partials.error')
 
         </form>
     </div>
