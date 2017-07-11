@@ -32,7 +32,7 @@
             <form action="/posts/{{$post->id}}/comment" method="POST">
                 {{csrf_field()}}
                 <div class="form-group">
-                    <textarea name="body" class="form-control" id="body" cols="30" rows="10" placeholder="your Body Here."></textarea>
+                    <textarea name="body" class="form-control" id="body" cols="30" rows="10" placeholder="your comment Here."></textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit">Add Comment</button>
