@@ -5,6 +5,7 @@
         </a>
     </h2>
     <p class="blog-post-meta"> 
+        {{$post->user->name}} at
         {{$post->created_at->toDayDateTimeString()}}
     </p>
 
