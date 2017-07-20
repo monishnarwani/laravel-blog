@@ -4,6 +4,7 @@
 	<title>Testing</title>
 </head>
 <body>
-	<h1>Welcome to My-Blog! </h1>
+	{{Log::info($user)}}
+	<h1>Welcome to My-Blog! {{$user->name}} </h1>
 </body>
 </html>

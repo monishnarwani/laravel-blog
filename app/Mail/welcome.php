@@ -7,10 +7,12 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\User;
+use Illuminate\Support\Facades\Log;
+
 class welcome extends Mailable
 {
     use Queueable, SerializesModels;
-    protected $user;
+    public $user;
     /**
      * Create a new message instance.
      *
@@ -19,7 +21,8 @@ class welcome extends Mailable
     public function __construct(User $user)
     {
         //
-        $this->$user = $user;
+        $this->user = $user;
+
     }
 
     /**
@@ -29,6 +32,6 @@ class welcome extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.welcome', compact('user'));
+        return $this->view('emails.welcome');
     }
 }

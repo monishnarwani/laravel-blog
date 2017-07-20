@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 use App\Mail\welcome;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 class RegistrationController extends Controller
 {
@@ -32,6 +33,7 @@ class RegistrationController extends Controller
         ]);
 
         auth()->login($user);
+        Log::info('controller'.$user);
 
         \Mail::to($user)->send(new welcome($user));
 
