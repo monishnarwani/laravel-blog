@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use App\Mail\welcome;
+use Illuminate\Support\Facades\Mail;
 
 class RegistrationController extends Controller
 {
@@ -22,7 +24,7 @@ class RegistrationController extends Controller
             'email' => 'required|email',
             'password' => 'required|confirmed'
         ]);
-
+        
         $user = User::create([
             'name' => request('name'),
             'email' => request('email'),
@@ -30,6 +32,8 @@ class RegistrationController extends Controller
         ]);
 
         auth()->login($user);
+
+        \Mail::to($user)->send(new welcome($user));
 
         return redirect('/');
 
